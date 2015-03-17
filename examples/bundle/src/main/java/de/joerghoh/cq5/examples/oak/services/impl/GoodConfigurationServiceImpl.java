@@ -1,4 +1,7 @@
-package de.joerghoh.cq5.examples.aok.services.impl;
+package de.joerghoh.cq5.examples.oak.services.impl;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.felix.scr.annotations.Activate;
 import org.apache.felix.scr.annotations.Component;
@@ -8,6 +11,7 @@ import org.apache.sling.api.resource.LoginException;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ResourceResolverFactory;
+import org.apache.sling.api.resource.ValueMap;
 import org.slf4j.LoggerFactory;
 
 import de.joerghoh.cq5.examples.oak.services.ConfigurationService;
@@ -33,12 +37,17 @@ public class GoodConfigurationServiceImpl implements ConfigurationService {
 	ResourceResolverFactory rrf;
 	
 	
-	public Resource getConfiguration (String module) {
-		Resource result = null;
+	public Map<String,String> getConfiguration (String module) {
+		Map<String,String> result = new HashMap<String,String>();
 		ResourceResolver adminResolver = null;
 		try {
 			adminResolver = rrf.getAdministrativeResourceResolver(null);
-			result = adminResolver.getResource(basepath + module);
+			Resource r =  adminResolver.getResource(basepath + module);
+			ValueMap vm = r.adaptTo(ValueMap.class);
+			for (String k: vm.keySet()) {
+				result.put(k, vm.get(k).toString());
+			}
+			return result;
 		} catch (LoginException e) {
 			e.printStackTrace();
 		} finally {
