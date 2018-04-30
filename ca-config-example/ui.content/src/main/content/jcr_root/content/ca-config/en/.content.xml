@@ -8,7 +8,7 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="English"
         sling:resourceType="ca-config/components/structure/page"
-        sling:contentRef="/conf/ca-config/content/en"
+        sling:configRef="/conf/ca-config/content/en"
         pageTitle="New Project"
         socialMedia="[facebook]">
         <root

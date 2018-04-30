@@ -30,8 +30,8 @@ public class CaConfigParticipantStepChooser implements ParticipantStepChooser {
 			ResourceResolver rr = wfSession.adaptTo(ResourceResolver.class);
 			Resource contentResource = rr.getResource(path);
 			if (contentResource != null) {
-				CaConfiguParticipantChooserConfig config = contentResource.adaptTo(ConfigurationBuilder.class)
-						.as(CaConfiguParticipantChooserConfig.class);
+				CaConfigParticipantStepChooserConfig config = contentResource.adaptTo(ConfigurationBuilder.class)
+						.as(CaConfigParticipantStepChooserConfig.class);
 				return config.approverGroup();
 			} else {
 				LOG.warn("Path {} does not exist", path);
