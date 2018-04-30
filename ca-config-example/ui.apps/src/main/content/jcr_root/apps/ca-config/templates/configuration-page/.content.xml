@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Template with focus on content."
+    jcr:primaryType="cq:Template"
+    jcr:title="WCM.io based Configuration page"
+    allowedPaths="[/content/ca-config/.+]"
+    ranking="{Long}110">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="wcm-io/caconfig/editor/components/page/editor">
+    </jcr:content>
+</jcr:root>
