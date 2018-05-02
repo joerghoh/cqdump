@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/de.joerghoh.cqdump.samples.unittest"/>
+    <filter root="/content/de.joerghoh.cqdump.samples.unittest"/>
+    <filter root="/content/dam/de.joerghoh.cqdump.samples.unittest"/>
+</workspaceFilter>

@@ -1,0 +1,28 @@
+{
+	"jcr:content" : "nt:unstructured",
+	
+	"mycompany": {
+		"jcr:primaryType" : "cq:Page",
+		"jcr:content" : {
+			"jcr:primaryType" : "cq:PageContent",
+			"jcr:title" : "MyCompany homepage"
+		},
+		"products" : {
+			"jcr:primaryType" : "cq:Page",
+			"jcr:content" : {
+				"jcr:primaryType" : "cq:PageContent",
+				"jcr:title" : "products page"
+			}
+		},
+		"services" : {
+			"jcr:primaryType" : "cq:Page",
+			"jcr:content" : {
+				"jcr:primaryType" : "cq:PageContent",
+				"jcr:title" : "services page"
+			}
+		}
+		
+		
+	}
+
+}

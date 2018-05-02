@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: De.joerghoh.cqdump.samples.unittest.core
+Bundle-SymbolicName: de.joerghoh.cqdump.samples.unittest.core
+Bundle-Version: 1.0.0.qualifier
+Export-Package: main.java.de.joerghoh.cqdump.core,
+  main.java.de.joerghoh.cqdump.core.servlets
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
