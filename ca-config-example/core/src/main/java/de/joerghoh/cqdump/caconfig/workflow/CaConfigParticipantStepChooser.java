@@ -15,7 +15,7 @@ import com.adobe.granite.workflow.metadata.MetaDataMap;
 
 // We use OSGI annotations, so a simple @Component is enough
 
-@Component(name="CA-Config based participant chooser")
+@Component()
 public class CaConfigParticipantStepChooser implements ParticipantStepChooser {
 	
 	final static Logger LOG = LoggerFactory.getLogger(CaConfigParticipantStepChooser.class);
