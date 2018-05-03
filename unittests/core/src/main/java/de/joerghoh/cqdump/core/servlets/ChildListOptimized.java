@@ -34,21 +34,17 @@ import org.slf4j.LoggerFactory;
 public class ChildListOptimized extends SlingAllMethodsServlet {
 
 	protected final Logger loger = LoggerFactory.getLogger(ChildListOptimized.class);
-
 	private static final long serialVersionUID = 9176255033916949528L;
-
-	private JSONArray array;
 
 	@Override
 	public void doGet(final SlingHttpServletRequest request, final SlingHttpServletResponse response)
 			throws ServletException, IOException {
 
-		try{
+		try {
 
 			Resource resource = request.getResource();
-			
-			array = new JSONArray();
-			
+			JSONArray array = new JSONArray();
+
 			Iterator<Resource> children = resource.listChildren();
 			while (children.hasNext()) {
 				Resource child = children.next();
@@ -57,14 +53,10 @@ public class ChildListOptimized extends SlingAllMethodsServlet {
 			}
 			response.setContentType("application/json");
 			response.getOutputStream().print(array.toString());
-			
-			
-		}
-		catch(JSONException e)
-		{
+
+		} catch (JSONException e) {
 			loger.error("Could not formulate JSON response");
 			throw new ServletException("Error", e);
-
 		}
 
 	}
@@ -75,7 +67,7 @@ public class ChildListOptimized extends SlingAllMethodsServlet {
 		obj.put("jcr:path", resource.getPath());
 		ValueMap vm = resource.adaptTo(ValueMap.class);
 		vm.forEach((key,value) -> {
-			vm.put(key, value);
+			vm.put(key, value);	
 		});
 		
 		return obj;
