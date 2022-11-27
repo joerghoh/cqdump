@@ -13,18 +13,15 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 public class ModelWith2OptionalInjects implements PerformanceTestModel {
 	
 	
-	@ValueMapValue
-	@Named("key1")
+	@ValueMapValue(name="key1")
 	@Default(values="")
 	protected String key1;
 	
-	@ValueMapValue
-	@Named("key2")
+	@ValueMapValue(name="key2")
 	@Default(values = "")
 	protected String key2;
 	
-	@ValueMapValue
-	@Named("key3")
+	@ValueMapValue(name="key3")
 	@Default(values = "")
 	protected String key3;
 	
