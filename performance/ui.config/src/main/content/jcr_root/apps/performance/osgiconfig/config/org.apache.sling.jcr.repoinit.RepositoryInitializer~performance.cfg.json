@@ -1,7 +1,7 @@
 {
     "scripts": [
-        "create path (sling:OrderedFolder) /content/dam/performance",
-        "create path (nt:unstructured) /content/dam/performance/jcr:content",
-        "set properties on /content/dam/performance/jcr:content\n  set cq:conf{String} to /conf/performance\n  set jcr:title{String} to \"cqdump-performance\"\nend"
+        "create path (nt:unstructured) /content/cqdump/performance",
+        "create service user cqdump-writer",
+        "set ACL on /content/cqdump/performance\n  allow jcr:all for cqdump-writer\nend"
     ]
 }

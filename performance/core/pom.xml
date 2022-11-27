@@ -23,7 +23,7 @@
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>performance.core</artifactId>
+    <artifactId>de.joerghoh.cqdump.performance.core</artifactId>
     <name>cqdump-performance - Core</name>
     <description>Core bundle for cqdump-performance</description>
     <build>

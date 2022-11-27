@@ -62,7 +62,7 @@
                         </embedded>
                         <embedded>
                             <groupId>de.joerghoh.cqdump.performance</groupId>
-                            <artifactId>performance.core</artifactId>
+                            <artifactId>de.joerghoh.cqdump.performance.core</artifactId>
                             <target>/apps/performance-packages/application/install</target>
                         </embedded>
                         <embedded>
@@ -200,6 +200,12 @@
             <artifactId>performance.ui.config</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>de.joerghoh.cqdump.performance</groupId>
+            <artifactId>de.joerghoh.cqdump.performance.core</artifactId>
+            <version>${project.version}</version>
+            <type>jar</type>
         </dependency>
 
         <dependency>
