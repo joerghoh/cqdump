@@ -4,6 +4,8 @@ This project contains code I use in my blog https://cqdump.joerghoh.de; it shoul
 
 The focus is clearly on the illustration part, there is no focus on proper test coverage.
 
+Related blog articles:
+ * Sling Model performance: https://cqdump.joerghoh.de/2022/11/28/sling-model-performance/
 
 
 
