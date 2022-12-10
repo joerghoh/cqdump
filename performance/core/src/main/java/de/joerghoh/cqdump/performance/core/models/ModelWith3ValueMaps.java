@@ -1,7 +1,5 @@
 package de.joerghoh.cqdump.performance.core.models;
 
-import javax.inject.Named;
-
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Model;
