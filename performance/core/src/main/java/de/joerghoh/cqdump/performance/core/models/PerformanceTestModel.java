@@ -6,6 +6,11 @@ public interface PerformanceTestModel {
 		return this.getClass().getName();
 	}
 	
+	default boolean displayInNav() {
+		return false;
+	}
+	
+	
 	void validate();
 	
 }
