@@ -33,6 +33,15 @@ import de.joerghoh.cqdump.performance.core.models.PerformanceTestModel;
 import de.joerghoh.cqdump.performance.core.models.ModelWith3Injects;
 import de.joerghoh.cqdump.performance.core.models.ModelWith3ValueMaps;
 
+
+/**
+ * This is sample code to benchmark multiple versions of SlingModels; this code should not be
+ * considered as production quality. 
+ * 
+ * The matching blog post is https://cqdump.joerghoh.de/2022/11/28/sling-model-performance/
+ *
+ */
+
 @Component(service = { Servlet.class })
 @SlingServletPaths(value = "/bin/slingmodelcompare")
 @ServiceDescription("Sling Model Performance Comparison Servlet")
