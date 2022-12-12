@@ -31,6 +31,15 @@ import de.joerghoh.cqdump.performance.core.models.ModelWithPostconstruct;
 import de.joerghoh.cqdump.performance.core.models.ModelWithoutPostconstruct;
 import de.joerghoh.cqdump.performance.core.models.PerformanceTestModel;
 
+
+/**
+ * This is sample code to benchmark multiple versions of SlingModels; this code should not be
+ * considered as production quality. 
+ * 
+ * The matching blog post is https://cqdump.joerghoh.de/2022/12/12/sling-models-performance-part-2/
+ *
+ */
+
 @Component(service = { Servlet.class })
 @SlingServletPaths(value = "/bin/slingmodelpostconstruct")
 @ServiceDescription("Sling Model Performance Comparison Servlet -- PostConstruct")
